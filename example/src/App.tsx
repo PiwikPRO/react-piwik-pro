@@ -1,10 +1,17 @@
 import React from 'react'
-
-import { ExampleComponent } from '@piwikpro/react-piwik-pro'
-import '@piwikpro/react-piwik-pro/dist/index.css'
+import Dashboard from './components/Dashboard';
+import { useTrackPageViews } from './modules/useTrackPageViews';
+import { SnackbarProvider } from 'notistack';
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+
+  useTrackPageViews();
+
+  return (
+    <SnackbarProvider anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }} maxSnack={10}>
+      <Dashboard />
+    </SnackbarProvider>
+  );
 }
 
 export default App
