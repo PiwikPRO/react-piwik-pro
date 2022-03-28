@@ -1,6 +1,6 @@
-# Piwik PRO Library for React JS
+# Piwik PRO Library for React
 
-Dedicated Piwik PRO library that helps with implementing Piwik PRO Tag Manager and the Piwik PRO tracking client in ReactJS applications.
+Dedicated Piwik PRO library that helps with implementing Piwik PRO Tag Manager and the Piwik PRO tracking client in React applications.
 
 * [Installation](#installation)
   * [NPM](#npm)
@@ -34,7 +34,7 @@ npm install @piwik-pro/react-piwik-pro
 
 ### Basic setup
 
-In your ReactJS Project, include the default `PiwikPro` in the highest level application module. ie `index`. To set up the Piwik PRO Tag Manager container in the app, the easiest way is to call the `PiwikPro.initialize()` method. `PiwikPro.initialize()` must be initialized using this function before any of the other tracking functions will record any data.
+In your React Project, include the default `PiwikPro` in the highest level application module. ie `index`. To set up the Piwik PRO Tag Manager container in the app, the easiest way is to call the `PiwikPro.initialize()` method. `PiwikPro.initialize()` must be initialized using this function before any of the other tracking functions will record any data.
 
 In the arguments, pass your app ID and your account URL as parameters (marked 'container-id' and 'container-url' in the example below).
 
