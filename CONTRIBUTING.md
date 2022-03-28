@@ -4,10 +4,10 @@ We want this community to be friendly and respectful to each other. Please follo
 
 ## Development workflow
 
-To get started with the project, run `npm install` in the root directory to install the required dependencies for each package:
+To get started with the project, run `yarn` in the root directory to install the required dependencies for each package:
 
 ```sh  
-npm install  
+yarn 
 ```  
 
 
@@ -16,13 +16,13 @@ While developing, you can run the example to test your changes. Any changes you 
 To start the packager:
 
 ```sh  
-ng serve  
+yarn start
 ```   
 
 Remember to add tests for your change if possible. Run the unit tests by:
 
 ```sh  
-ng test  
+yarn test  
 ```  
 
 ### Commit message convention
@@ -45,17 +45,6 @@ Our pre-commit hooks verify that your commit message matches this format when co
 We use [TypeScript](https://www.typescriptlang.org/) for type checking, [ESLint](https://eslint.org/) with [Prettier](https://prettier.io/) for linting and formatting the code, and [Jest](https://jestjs.io/) for testing.
 
 Our pre-commit hooks verify that the linter and tests pass when committing.
-
-### Scripts
-
-The `package.json` file contains various scripts for common tasks:
-
-- `npm start`: start the server for the example app.
-- `npm build`: run build project.
-- `npm watch`: "ng build --watch --configuration development",
-- `npm test`: run unit tests with Jest.
-- `npm test:dev`: run unit tests with Jest.
-- `npm lint`: lint files with ESLint.
 
 ### Sending a pull request
 
