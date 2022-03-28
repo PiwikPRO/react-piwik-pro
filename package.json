@@ -2,7 +2,7 @@
   "name": "@piwikpro/react-piwik-pro",
   "version": "1.0.0",
   "description": "Piwik PRO tracking library for ReactJS",
-  "author": "Daniel Twork",
+  "author": "Piwik Pro Integration Team <integrations@piwik.pro>",
   "license": "MIT",
   "repository": "https://github.com/PiwikPRO/react-piwik-pro",
   "main": "dist/index.js",
