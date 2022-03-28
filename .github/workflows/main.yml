@@ -12,25 +12,25 @@ on:
         default: 'warning'
 
 jobs:
-#   tests:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#       - uses: actions/setup-node@v1
-#         with:
-#           node-version: 16
-#       - name: 'Cache node Modules'
-#         uses: actions/cache@v1
-#         with:
-#           path: ~.npm
-#           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-#           restore-keys: |
-#             ${{ runner.os }}-node-
-#       - run: npm ci --ignore-scripts
-#       - run: npm test
+   tests:
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v2
+       - uses: actions/setup-node@v1
+         with:
+           node-version: 16
+       - name: 'Cache node Modules'
+         uses: actions/cache@v1
+         with:
+           path: ~.npm
+           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+           restore-keys: |
+             ${{ runner.os }}-node-
+       - run: yarn
+       - run: npm run test
 
   bump-and-build:
-#     needs: tests
+    needs: tests
     runs-on: ubuntu-latest
     steps:
       - name: Get the version
@@ -50,13 +50,7 @@ jobs:
             ${{ runner.os }}-node-
       - run: yarn
       - run: npm --no-git-tag-version --allow-same-version version ${{ steps.get_version.outputs.VERSION }}
-      - run: npm --no-git-tag-version --allow-same-version version ${{ steps.get_version.outputs.VERSION }}
       - run: npm run build
-#       - run: |
-#           cp SECURITY.md dist/ngx-piwik-pro
-#           cp LICENSE dist/ngx-piwik-pro
-#           cp README.md dist/ngx-piwik-pro
-#           cp CHANGELOG.md dist/ngx-piwik-pro
       - run: npm pack
       - name: 'Upload Build Artifatc ${{ steps.get_version.outputs.VERSION }}'
         uses: actions/upload-artifact@v2
