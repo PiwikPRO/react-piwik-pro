@@ -1,7 +1,6 @@
 import { PiwikProWindow } from '../../interfaces/piwikpro.window';
-// interface Window {
-//   _paq?: any;
-// }
+import { IS_DEBUG } from '../../core';
+
 function push(collection: any[]) {
   if (!(window as PiwikProWindow)._paq) {
     (window as PiwikProWindow)._paq = [];
@@ -9,7 +8,8 @@ function push(collection: any[]) {
 
   (window as PiwikProWindow)._paq.push(["setCustomUrl", window.location.pathname]);
   (window as PiwikProWindow)._paq.push(["setDocumentTitle", document.title]);
-  console.log('Push', collection);
+  console.log(process.env)
+  IS_DEBUG && console.log('Push', collection);
   return (window as PiwikProWindow)._paq.push(collection);
 }
 
