@@ -1,5 +1,4 @@
 function init(containerId: string, containerUrl: string) {
-  console.log('INIT')
   if (!containerId) {
     console.error('Empty tracking code for Piwik Pro.');
     return;
@@ -28,6 +27,8 @@ tags.async=!0,tags.src="${containerUrl}/containers/"+id+".js"+qPString,scripts.p
   const head: HTMLHeadElement = document.getElementsByTagName('body')[0];
   head.appendChild(s);
 }
+
+export const IS_DEBUG = process.env.DEBUG || process.env.NODE_ENV === 'development';
 
 export default {
   init
