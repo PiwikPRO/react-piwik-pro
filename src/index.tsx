@@ -10,6 +10,7 @@ export * as eCommerce from './services/e-commerce/e-commerce.service';
 export * as GoalConversions from './services/goal-conversions/goal-conversions.service';
 export * as SiteSearch from './services/site-search/site-search.service';
 export * as UserManagement from './services/user-management/userManagement.service';
+export * as DataLayer from './services/dataLayer/dataLayer.service';
 
 export default {
   initialize: PiwikPro.default.init,

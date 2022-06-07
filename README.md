@@ -20,6 +20,7 @@ Dedicated Piwik PRO library that helps with implementing Piwik PRO Tag Manager a
   * [Download and outlink Service](#download-and-outlink-service)
   * [Goal Conversions](#goal-conversions)
   * [Custom Dimensions](#custom-dimensions)
+  * [DataLayer Service](#data-layer)
 
 ## Installation
 
@@ -107,6 +108,22 @@ import { PageViews } from '@piwikpro/react-piwik-pro';
 const App = () => {
 
   PageViews.trackPageView('optional title');
+
+  return ...;
+}
+
+export default App
+```
+
+### Send an event with Data Layer
+
+```ts
+import { DataLayer } from '@piwikpro/react-piwik-pro';
+...
+
+const App = () => {
+
+  DataLayer.push({ event: 'test-event' });
 
   return ...;
 }
@@ -221,4 +238,13 @@ import { CustomDimensions } from '@piwikpro/react-piwik-pro'
 * `setCustomDimensionValue(customDimensionId: string | number, customDimensionValue: string)`  - Sets a custom dimension value to be used later.
 * `deleteCustomDimension(customDimensionId: string)` - Removes a custom dimension with the specified ID.
 * `getCustomDimensionValue(customDimensionId: string | number)` - Returns the value of a custom dimension with the specified ID.
+
+### Data Layer
+A data layer is a data structure on your site or app where you can store data and access it with tools like Tag Manager. You can include any data you want in your data layer.
+#### Import
+```ts
+import { DataLayer } from '@piwikpro/react-piwik-pro';
+```
+#### Methods
+* `push(dataLayerObject: Object)`  - Adds an event to a data layer.
 
