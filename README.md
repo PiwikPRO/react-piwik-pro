@@ -47,6 +47,20 @@ PiwikPro.initialize('container-id', 'container-url');
 ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
+### Setup with nonce
+
+The nonce attribute is useful to allow-list specific elements, such as a particular inline script or style elements. It can help you to avoid using the CSP unsafe-inline directive, which would allow-list all inline scripts or styles.
+
+If you want your nonce to be passed to the script, pass it as the third argument when calling the script initialization method.
+
+```ts
+import PiwikPro from '@piwikpro/react-piwik-pro';
+
+PiwikPro.initialize('container-id', 'container-url', 'nonce-string');
+
+ReactDOM.render(<App />, document.getElementById('root'))
+```
+
 
 [comment]: <> (### Set up the PageViews)
 
@@ -132,6 +146,14 @@ export default App
 ```
 
 ## API
+
+### Initialize
+
+```ts
+import PiwikPro from '@piwikpro/react-piwik-pro';
+```
+#### Methods
+* initialize(containerId: string, containerUrl:string, nonce?: string) - initialisation of the library
 
 ### Page Views Service
 A page view is the most basic type of a tracked event. It represents a single page viewing action.
