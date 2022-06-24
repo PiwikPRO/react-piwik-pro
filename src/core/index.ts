@@ -1,4 +1,4 @@
-function init(containerId: string, containerUrl: string) {
+function init(containerId: string, containerUrl: string, nonce?: string) {
   if (!containerId) {
     console.error('Empty tracking code for Piwik Pro.');
     return;
@@ -15,6 +15,9 @@ function init(containerId: string, containerUrl: string) {
 
   const s: HTMLScriptElement = document.createElement('script');
   s.async = false;
+  if (nonce) {
+    s.setAttribute("nonce", nonce);
+  }
   s.text = `(function(window, document, dataLayerName, id) {
 window[dataLayerName]=window[dataLayerName]||[],window[dataLayerName].push({start:(new Date).getTime(),event:"stg.start"});var scripts=document.getElementsByTagName('script')[0],tags=document.createElement('script');
 function stgCreateCookie(a,b,c){var d="";if(c){var e=new Date;e.setTime(e.getTime()+24*c*60*60*1e3),d="; expires="+e.toUTCString()}document.cookie=a+"="+b+d+"; path=/"}
