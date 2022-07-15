@@ -6,7 +6,7 @@ function push(collection: any[]) {
     (window as PiwikProWindow)._paq = [];
   }
 
-  (window as PiwikProWindow)._paq.push(["setCustomUrl", window.location.pathname]);
+  (window as PiwikProWindow)._paq.push(["setCustomUrl", window.location.href]);
   (window as PiwikProWindow)._paq.push(["setDocumentTitle", document.title]);
   IS_DEBUG && console.log('Push', collection);
   return (window as PiwikProWindow)._paq.push(collection);
