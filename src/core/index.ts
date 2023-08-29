@@ -1,3 +1,5 @@
+import { PiwikProWindow } from "../interfaces/piwikpro.window";
+
 function init(containerId: string, containerUrl: string, nonce?: string) {
   if (!containerId) {
     console.error('Empty tracking code for Piwik Pro.');
@@ -31,7 +33,10 @@ tags.async=!0,tags.src="${containerUrl}/containers/"+id+".js"+qPString,scripts.p
   head.appendChild(s);
 }
 
-export const IS_DEBUG = process.env.DEBUG || process.env.NODE_ENV === 'development';
+export const IS_DEBUG =
+  (typeof process !== 'undefined' && process.env.NODE_ENV === 'development') ||
+  (typeof window !== 'undefined' && (window as PiwikProWindow).IS_DEBUG) ||
+  false
 
 export default {
   init
