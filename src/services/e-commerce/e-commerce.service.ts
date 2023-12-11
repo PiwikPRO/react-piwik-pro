@@ -17,12 +17,6 @@ export function removeEcommerceItem(products: Product) {
   ])
 }
 
-export function clearEcommerceCart() {
-  PaqService.push([
-    TRACK_EVENT.CLEAR_ECOMMERCE_CART,
-  ])
-}
-
 export function getEcommerceItems(): Promise<object> {
   return new Promise((resolve, reject) => {
     try {
@@ -55,12 +49,9 @@ export function updateEcommerceCart(products: Product[], grandTotal: number | st
   ]);
 }
 
-export function setEcommerceView(productSKU: string, productName?: string, productCategory?: string[], productPrice?: string) {
+export function ecommerceProductDetailView(products: Product[]) {
   PaqService.push([
-    TRACK_EVENT.SET_ECOMMERCE_VIEW,
-    productSKU,
-    productName,
-    productCategory,
-    productPrice
+    TRACK_EVENT.ECOMMERCE_PRODUCT_DETAIL_VIEW,
+    products,
   ]);
 }
