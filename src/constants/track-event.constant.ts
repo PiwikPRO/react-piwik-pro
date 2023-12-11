@@ -3,7 +3,7 @@ export enum TRACK_EVENT {
   CUSTOM_EVENT = 'trackEvent',
   GOAL = 'trackGoal',
   SEARCH = 'trackSiteSearch',
-  ADD_ECOMMERCE_ITEM = 'addEcommerceItem',
+  ADD_ECOMMERCE_ITEM = 'ecommerceAddToCart',
   REMOVE_ECOMMERCE_ITEM = 'removeEcommerceItem',
   CLEAR_ECOMMERCE_CART = 'clearEcommerceCart',
   SET_ECOMMERCE_VIEW = 'setEcommerceView',
