@@ -18,10 +18,10 @@ export function addEcommerceItem(product: Product) {
   ])
 }
 
-export function removeEcommerceItem(productSKU: string) {
+export function removeEcommerceItem(product: Product) {
   PaqService.push([
     TRACK_EVENT.REMOVE_ECOMMERCE_ITEM,
-    productSKU
+    product
   ])
 }
 

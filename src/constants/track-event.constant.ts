@@ -4,7 +4,7 @@ export enum TRACK_EVENT {
   GOAL = 'trackGoal',
   SEARCH = 'trackSiteSearch',
   ADD_ECOMMERCE_ITEM = 'ecommerceAddToCart',
-  REMOVE_ECOMMERCE_ITEM = 'removeEcommerceItem',
+  REMOVE_ECOMMERCE_ITEM = 'ecommerceAddToCart',
   CLEAR_ECOMMERCE_CART = 'clearEcommerceCart',
   SET_ECOMMERCE_VIEW = 'setEcommerceView',
   UPDATE_ECOMMERCE_CART = 'trackEcommerceCartUpdate',
