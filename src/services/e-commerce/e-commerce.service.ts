@@ -5,23 +5,14 @@ import { Product } from '../../interfaces/product'
 export function addEcommerceItem(product: Product) {
   PaqService.push([
     TRACK_EVENT.ADD_ECOMMERCE_ITEM,
-    [{
-      sku: product.sku,
-      name: product.name,
-      category: product.category,
-      price: product.price,
-      quantity: product.quantity,
-      brand: product.brand,
-      variant: product.variant,
-      customDimensions: product.customDimensions,
-    }],
+    [product],
   ])
 }
 
 export function removeEcommerceItem(product: Product) {
   PaqService.push([
     TRACK_EVENT.REMOVE_ECOMMERCE_ITEM,
-    product
+    [product]
   ])
 }
 
