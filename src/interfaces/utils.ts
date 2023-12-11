@@ -1,1 +1,1 @@
-export type LimitedArrayFiveStrings<T extends string[]> = T & { length: 5 };
+export type LimitedArrayFiveStrings<T extends string[] = []> = [string, ...T] | [string, string, string, string, string];
