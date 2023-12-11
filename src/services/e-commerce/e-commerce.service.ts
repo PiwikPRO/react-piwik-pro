@@ -1,6 +1,7 @@
 import { TRACK_EVENT } from '../../constants/track-event.constant';
 import { PaqService } from '../paqService/paq.service';
 import { Product } from '../../interfaces/product'
+import { PaymentInformation } from '../../interfaces/payment'
 
 export function addEcommerceItem(product: Product) {
   PaqService.push([
@@ -38,29 +39,19 @@ export function getEcommerceItems(): Promise<object> {
   });
 }
 
-export function trackEcommerceOrder(
-  orderId: string,
-  orderGrandTotal: number,
-  orderSubTotal?: number,
-  orderTax?: number,
-  orderShipping?: number,
-  orderDiscount?: number
-) {
+export function ecommerceOrder(products: Product[], paymentInformation: PaymentInformation) {
   PaqService.push([
     TRACK_EVENT.ORDER_ECOMMERCE,
-    orderId,
-    orderGrandTotal,
-    orderSubTotal,
-    orderTax,
-    orderShipping,
-    orderDiscount,
+    products,
+    paymentInformation,
   ]);
 }
 
-export function trackEcommerceCartUpdate(cartAmount: number) {
+export function updateEcommerceCart(products: Product[], grandTotal: number | string) {
   PaqService.push([
     TRACK_EVENT.UPDATE_ECOMMERCE_CART,
-    cartAmount
+    products,
+    grandTotal,
   ]);
 }
 
