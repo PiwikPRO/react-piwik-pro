@@ -1,20 +1,20 @@
 import { TRACK_EVENT } from '../../constants/track-event.constant';
 import { PaqService } from '../paqService/paq.service';
+import { Product } from '../../interfaces/product'
 
-export function addEcommerceItem(
-  productSKU: string,
-  productName: string,
-  productCategory: string | string[],
-  productPrice: number,
-  productQuantity: number
-) {
+export function addEcommerceItem(product: Product) {
   PaqService.push([
     TRACK_EVENT.ADD_ECOMMERCE_ITEM,
-    productSKU,
-    productName,
-    productCategory,
-    productPrice,
-    productQuantity,
+    [{
+      sku: product.sku,
+      name: product.name,
+      category: product.category,
+      price: product.price,
+      quantity: product.quantity,
+      brand: product.brand,
+      variant: product.variant,
+      customDimensions: product.customDimensions,
+    }],
   ])
 }
 
