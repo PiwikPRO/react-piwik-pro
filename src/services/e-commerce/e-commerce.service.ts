@@ -3,17 +3,17 @@ import { PaqService } from '../paqService/paq.service';
 import { Product } from '../../interfaces/product'
 import { PaymentInformation } from '../../interfaces/payment'
 
-export function addEcommerceItem(product: Product) {
+export function addEcommerceItem(products: Product[]) {
   PaqService.push([
     TRACK_EVENT.ADD_ECOMMERCE_ITEM,
-    [product],
+    products,
   ])
 }
 
-export function removeEcommerceItem(product: Product) {
+export function removeEcommerceItem(products: Product) {
   PaqService.push([
     TRACK_EVENT.REMOVE_ECOMMERCE_ITEM,
-    [product]
+    products
   ])
 }
 
