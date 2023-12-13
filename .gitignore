@@ -13,7 +13,8 @@ dist
 .DS_Store
 .env
 .env.local
-.env.development.localnvm install node
+.env.development.local
+nvm install node
 .env.test.local
 .env.production.local
 
