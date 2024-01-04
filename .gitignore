@@ -14,7 +14,6 @@ dist
 .env
 .env.local
 .env.development.local
-nvm install node
 .env.test.local
 .env.production.local
 
