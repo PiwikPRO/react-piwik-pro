@@ -310,7 +310,7 @@ const ECommercePage: FunctionComponent = () => {
       </Grid>
       <ProductDetailView
         product={selectedProduct}
-        open={productDetailViewOpen}
+        isOpen={productDetailViewOpen}
         close={() => setProductDetailViewOpen(false)}
       />
     </Grid>

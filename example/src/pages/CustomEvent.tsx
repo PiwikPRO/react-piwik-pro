@@ -1,19 +1,19 @@
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
-import React, { FunctionComponent, useEffect } from 'react'
+import { FunctionComponent, useEffect, useState } from 'react'
 import AddressForm from '../components/CustomEvent/AddressForm.tsx'
 import { CustomEvent } from '@piwikpro/react-piwik-pro'
 import { useSnackbar } from 'notistack'
 import Paper from '@mui/material/Paper'
 
 const CustomEventPage: FunctionComponent = () => {
-  const [finish, setFinish] = React.useState(false)
+  const [finish, setFinish] = useState(false)
   const { enqueueSnackbar } = useSnackbar()
 
   useEffect(() => {
     document.title = 'Custom Event'
-  })
+  }, [])
 
   return (
     <>

@@ -12,17 +12,17 @@ import {
 
 type Props = {
   product: Product | null
-  open: boolean
+  isOpen: boolean
   close: () => void
 }
 
 const ProductDetailView: FunctionComponent<Props> = ({
   product,
-  open,
+  isOpen,
   close
 }) => {
   return (
-    <Dialog onClose={close} open={open}>
+    <Dialog onClose={close} open={isOpen}>
       {product && (
         <Grid container>
           <Paper
