@@ -1,34 +1,14 @@
-import { TRACK_EVENT } from '../../constants/track-event.constant';
-import { PaqService } from '../paqService/paq.service';
+import { TRACK_EVENT } from '../../constants/track-event.constant'
+import { PaqService } from '../paqService/paq.service'
+import { Product } from '../../interfaces/product'
+import { PaymentInformation } from '../../interfaces/payment'
 
-export function addEcommerceItem(
-  productSKU: string,
-  productName: string,
-  productCategory: string | string[],
-  productPrice: number,
-  productQuantity: number
-) {
-  PaqService.push([
-    TRACK_EVENT.ADD_ECOMMERCE_ITEM,
-    productSKU,
-    productName,
-    productCategory,
-    productPrice,
-    productQuantity,
-  ])
+export function addEcommerceItem(products: Product[]) {
+  PaqService.push([TRACK_EVENT.ADD_ECOMMERCE_ITEM, products])
 }
 
-export function removeEcommerceItem(productSKU: string) {
-  PaqService.push([
-    TRACK_EVENT.REMOVE_ECOMMERCE_ITEM,
-    productSKU
-  ])
-}
-
-export function clearEcommerceCart() {
-  PaqService.push([
-    TRACK_EVENT.CLEAR_ECOMMERCE_CART,
-  ])
+export function removeEcommerceItem(products: Product[]) {
+  PaqService.push([TRACK_EVENT.REMOVE_ECOMMERCE_ITEM, products])
 }
 
 export function getEcommerceItems(): Promise<object> {
@@ -36,49 +16,31 @@ export function getEcommerceItems(): Promise<object> {
     try {
       PaqService.push([
         function (this: any): void {
-          resolve(this.getEcommerceItems());
-        },
-      ]);
+          resolve(this.getEcommerceItems())
+        }
+      ])
     } catch (e) {
       if (e instanceof ReferenceError) {
-        reject(e);
+        reject(e)
       }
     }
-  });
+  })
 }
 
-export function trackEcommerceOrder(
-  orderId: string,
-  orderGrandTotal: number,
-  orderSubTotal?: number,
-  orderTax?: number,
-  orderShipping?: number,
-  orderDiscount?: number
+export function ecommerceOrder(
+  products: Product[],
+  paymentInformation: PaymentInformation
 ) {
-  PaqService.push([
-    TRACK_EVENT.ORDER_ECOMMERCE,
-    orderId,
-    orderGrandTotal,
-    orderSubTotal,
-    orderTax,
-    orderShipping,
-    orderDiscount,
-  ]);
+  PaqService.push([TRACK_EVENT.ORDER_ECOMMERCE, products, paymentInformation])
 }
 
-export function trackEcommerceCartUpdate(cartAmount: number) {
-  PaqService.push([
-    TRACK_EVENT.UPDATE_ECOMMERCE_CART,
-    cartAmount
-  ]);
+export function updateEcommerceCart(
+  products: Product[],
+  grandTotal: PaymentInformation['grandTotal']
+) {
+  PaqService.push([TRACK_EVENT.UPDATE_ECOMMERCE_CART, products, grandTotal])
 }
 
-export function setEcommerceView(productSKU: string, productName?: string, productCategory?: string[], productPrice?: string) {
-  PaqService.push([
-    TRACK_EVENT.SET_ECOMMERCE_VIEW,
-    productSKU,
-    productName,
-    productCategory,
-    productPrice
-  ]);
+export function ecommerceProductDetailView(products: Product[]) {
+  PaqService.push([TRACK_EVENT.ECOMMERCE_PRODUCT_DETAIL_VIEW, products])
 }
