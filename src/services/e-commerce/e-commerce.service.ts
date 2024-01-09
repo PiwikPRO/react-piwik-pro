@@ -36,7 +36,7 @@ export function ecommerceOrder(
 
 export function updateEcommerceCart(
   products: Product[],
-  grandTotal: number | string
+  grandTotal: PaymentInformation['grandTotal']
 ) {
   PaqService.push([TRACK_EVENT.UPDATE_ECOMMERCE_CART, products, grandTotal])
 }

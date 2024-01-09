@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material'
 
-function Home() {
+function HomePage() {
   return (
     <>
       <Typography variant='h5'>
@@ -14,4 +14,4 @@ function Home() {
   )
 }
 
-export default Home
+export default HomePage

@@ -100,7 +100,7 @@ const ECommercePage: FunctionComponent = () => {
     document.title = 'eCommerce Page'
   })
 
-  const [cart, addToCart] = useState<Product[]>([])
+  const [cart, setCart] = useState<Product[]>([])
   const { enqueueSnackbar } = useSnackbar()
 
   const handlelAddToCart = (product: Product) => {
@@ -112,7 +112,7 @@ const ECommercePage: FunctionComponent = () => {
       }
     ])
 
-    addToCart([
+    setCart([
       ...cart,
       {
         ...product,
@@ -153,7 +153,7 @@ const ECommercePage: FunctionComponent = () => {
 
   const removeProduct = (product: Product) => {
     const newCart = cart.filter((item) => item.sku !== product.sku)
-    addToCart(newCart)
+    setCart(newCart)
     enqueueSnackbar(`eCommerce.removeEcommerceItem()`, { variant: 'success' })
     eCommerce.removeEcommerceItem(newCart)
   }
@@ -180,7 +180,7 @@ const ECommercePage: FunctionComponent = () => {
     const shipping = 4
     const discount = 5
 
-    addToCart(newCart)
+    setCart(newCart)
     enqueueSnackbar(`eCommerce.updateEcommerceCart()`, { variant: 'success' })
     eCommerce.updateEcommerceCart(newCart, subTotal + tax + shipping - discount)
   }
@@ -195,6 +195,14 @@ const ECommercePage: FunctionComponent = () => {
       variant: 'success'
     })
     eCommerce.ecommerceProductDetailView([product])
+  }
+
+  const handleGetEcommerceItems = async () => {
+    const ecommerceItems = await eCommerce.getEcommerceItems()
+    console.log(ecommerceItems)
+    enqueueSnackbar(`eCommerce.getEcommerceItems()`, {
+      variant: 'success'
+    })
   }
 
   return (
@@ -304,6 +312,26 @@ const ECommercePage: FunctionComponent = () => {
           <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
             <Button variant='contained' onClick={handleCheckout} sx={{ ml: 1 }}>
               Place order
+            </Button>
+          </Box>
+        </Paper>
+      </Grid>
+
+      <Grid item sm={12}>
+        <Paper
+          sx={{
+            p: 2,
+            display: 'flex',
+            flexDirection: 'column'
+          }}
+        >
+          <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <Button
+              variant='contained'
+              onClick={handleGetEcommerceItems}
+              sx={{ ml: 1 }}
+            >
+              Get eCommerceItems
             </Button>
           </Box>
         </Paper>
