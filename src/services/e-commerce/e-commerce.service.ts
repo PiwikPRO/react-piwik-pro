@@ -3,7 +3,7 @@ import { PaqService } from '../paqService/paq.service'
 import { Product } from '../../interfaces/product'
 import { PaymentInformation } from '../../interfaces/payment'
 /**
- * @deprecated since version 1.3.1. Please use the newMethod instead.
+ * @deprecated since version 1.3.1. Please use the ecommerceAddToCart instead.
  */
 export function addEcommerceItem(
   productSKU: string,
