@@ -56,11 +56,33 @@ export function getEcommerceItems(): Promise<object> {
   })
 }
 
+/**
+ * @deprecated since version 1.3.1. Please use the ecommerceRemoveFromCart instead.
+ */
+export function trackEcommerceOrder(
+  orderId: string,
+  orderGrandTotal: number,
+  orderSubTotal?: number,
+  orderTax?: number,
+  orderShipping?: number,
+  orderDiscount?: number
+) {
+  PaqService.push([
+    TRACK_EVENT.TRACK_ECOMMERCE_ORDER,
+    orderId,
+    orderGrandTotal,
+    orderSubTotal,
+    orderTax,
+    orderShipping,
+    orderDiscount
+  ])
+}
+
 export function ecommerceOrder(
   products: Product[],
   paymentInformation: PaymentInformation
 ) {
-  PaqService.push([TRACK_EVENT.ORDER_ECOMMERCE, products, paymentInformation])
+  PaqService.push([TRACK_EVENT.ECOMMERCE_ORDER, products, paymentInformation])
 }
 
 export function updateEcommerceCart(
