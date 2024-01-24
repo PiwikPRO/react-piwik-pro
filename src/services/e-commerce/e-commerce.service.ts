@@ -85,11 +85,18 @@ export function ecommerceOrder(
   PaqService.push([TRACK_EVENT.ECOMMERCE_ORDER, products, paymentInformation])
 }
 
-export function updateEcommerceCart(
+/**
+ * @deprecated since version 1.3.1. Please use the ecommerceCartUpdate instead.
+ */
+export function trackEcommerceCartUpdate(cartAmount: number) {
+  PaqService.push([TRACK_EVENT.TRACK_ECOMMERCE_CART_UPDATE, cartAmount])
+}
+
+export function ecommerceCartUpdate(
   products: Product[],
   grandTotal: PaymentInformation['grandTotal']
 ) {
-  PaqService.push([TRACK_EVENT.UPDATE_ECOMMERCE_CART, products, grandTotal])
+  PaqService.push([TRACK_EVENT.ECOMMERCE_CART_UPDATE, products, grandTotal])
 }
 
 export function ecommerceProductDetailView(products: Product[]) {

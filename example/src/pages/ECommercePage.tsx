@@ -181,8 +181,8 @@ const ECommercePage: FunctionComponent = () => {
     const discount = 5
 
     setCart(newCart)
-    enqueueSnackbar(`eCommerce.updateEcommerceCart()`, { variant: 'success' })
-    eCommerce.updateEcommerceCart(newCart, subTotal + tax + shipping - discount)
+    enqueueSnackbar(`eCommerce.ecommerceCartUpdate()`, { variant: 'success' })
+    eCommerce.ecommerceCartUpdate(newCart, subTotal + tax + shipping - discount)
   }
 
   const [productDetailViewOpen, setProductDetailViewOpen] = useState(false)
