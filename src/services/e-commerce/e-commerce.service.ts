@@ -2,6 +2,7 @@ import { TRACK_EVENT } from '../../constants/track-event.constant'
 import { PaqService } from '../paqService/paq.service'
 import { Product } from '../../interfaces/product'
 import { PaymentInformation } from '../../interfaces/payment'
+
 /**
  * @deprecated since version 1.3.1. Please use the ecommerceAddToCart instead.
  */
@@ -26,8 +27,14 @@ export function ecommerceAddToCart(products: Product[]) {
   PaqService.push([TRACK_EVENT.ECOMMERCE_ADD_TO_CART, products])
 }
 
-export function removeEcommerceItem(products: Product[]) {
-  PaqService.push([TRACK_EVENT.REMOVE_ECOMMERCE_ITEM, products])
+/**
+ * @deprecated since version 1.3.1. Please use the ecommerceRemoveFromCart instead.
+ */
+export function removeEcommerceItem(productSKU: string) {
+  PaqService.push([TRACK_EVENT.REMOVE_ECOMMERCE_ITEM, productSKU])
+}
+export function ecommerceRemoveFromCart(products: Product[]) {
+  PaqService.push([TRACK_EVENT.ECOMMERCE_REMOVE_FROM_CART, products])
 }
 
 export function getEcommerceItems(): Promise<object> {

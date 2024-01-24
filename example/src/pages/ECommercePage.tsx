@@ -155,7 +155,7 @@ const ECommercePage: FunctionComponent = () => {
     const newCart = cart.filter((item) => item.sku !== product.sku)
     setCart(newCart)
     enqueueSnackbar(`eCommerce.removeEcommerceItem()`, { variant: 'success' })
-    eCommerce.removeEcommerceItem(newCart)
+    eCommerce.ecommerceRemoveFromCart(newCart)
   }
 
   const increaseProductQuantity = (product: Product) => {
