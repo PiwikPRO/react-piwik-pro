@@ -197,14 +197,6 @@ const ECommercePage: FunctionComponent = () => {
     eCommerce.ecommerceProductDetailView([product])
   }
 
-  const handleGetEcommerceItems = async () => {
-    const ecommerceItems = await eCommerce.getEcommerceItems()
-    console.log(ecommerceItems)
-    enqueueSnackbar(`eCommerce.getEcommerceItems()`, {
-      variant: 'success'
-    })
-  }
-
   return (
     <Grid container spacing={4}>
       <Grid xs={12} sm={7} item>
@@ -317,25 +309,6 @@ const ECommercePage: FunctionComponent = () => {
         </Paper>
       </Grid>
 
-      <Grid item sm={12}>
-        <Paper
-          sx={{
-            p: 2,
-            display: 'flex',
-            flexDirection: 'column'
-          }}
-        >
-          <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <Button
-              variant='contained'
-              onClick={handleGetEcommerceItems}
-              sx={{ ml: 1 }}
-            >
-              Get eCommerceItems
-            </Button>
-          </Box>
-        </Paper>
-      </Grid>
       <ProductDetailView
         product={selectedProduct}
         isOpen={productDetailViewOpen}
