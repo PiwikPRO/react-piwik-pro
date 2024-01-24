@@ -70,3 +70,21 @@ export function updateEcommerceCart(
 export function ecommerceProductDetailView(products: Product[]) {
   PaqService.push([TRACK_EVENT.ECOMMERCE_PRODUCT_DETAIL_VIEW, products])
 }
+
+/**
+ * @deprecated since version 1.3.1.
+ */
+export function setEcommerceView(
+  productSKU: string,
+  productName?: string,
+  productCategory?: string[],
+  productPrice?: string
+) {
+  PaqService.push([
+    TRACK_EVENT.SET_ECOMMERCE_VIEW,
+    productSKU,
+    productName,
+    productCategory,
+    productPrice
+  ])
+}

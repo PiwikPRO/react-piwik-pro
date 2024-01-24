@@ -10,6 +10,7 @@ export enum TRACK_EVENT {
   ECOMMERCE_PRODUCT_DETAIL_VIEW = 'ecommerceProductDetailView',
   UPDATE_ECOMMERCE_CART = 'ecommerceCartUpdate',
   ORDER_ECOMMERCE = 'ecommerceOrder',
+  SET_ECOMMERCE_VIEW = 'setEcommerceView',
   SET_CUSTOM_VARIABLE = 'setCustomVariable',
   DELETE_CUSTOM_VARIABLE = 'deleteCustomVariable',
   STORE_CUSTOM_VARIABLES_IN_COOKIE = 'storeCustomVariablesInCookie',
