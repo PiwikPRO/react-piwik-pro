@@ -37,6 +37,9 @@ export function ecommerceRemoveFromCart(products: Product[]) {
   PaqService.push([TRACK_EVENT.ECOMMERCE_REMOVE_FROM_CART, products])
 }
 
+/**
+ * @deprecated since version 1.3.1.
+ */
 export function getEcommerceItems(): Promise<object> {
   return new Promise((resolve, reject) => {
     try {
