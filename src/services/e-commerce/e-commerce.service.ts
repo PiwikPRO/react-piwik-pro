@@ -2,9 +2,28 @@ import { TRACK_EVENT } from '../../constants/track-event.constant'
 import { PaqService } from '../paqService/paq.service'
 import { Product } from '../../interfaces/product'
 import { PaymentInformation } from '../../interfaces/payment'
+/**
+ * @deprecated since version 1.3.1. Please use the newMethod instead.
+ */
+export function addEcommerceItem(
+  productSKU: string,
+  productName: string,
+  productCategory: string | string[],
+  productPrice: number,
+  productQuantity: number
+) {
+  PaqService.push([
+    TRACK_EVENT.ADD_ECOMMERCE_ITEM,
+    productSKU,
+    productName,
+    productCategory,
+    productPrice,
+    productQuantity
+  ])
+}
 
-export function addEcommerceItem(products: Product[]) {
-  PaqService.push([TRACK_EVENT.ADD_ECOMMERCE_ITEM, products])
+export function ecommerceAddToCart(products: Product[]) {
+  PaqService.push([TRACK_EVENT.ECOMMERCE_ADD_TO_CART, products])
 }
 
 export function removeEcommerceItem(products: Product[]) {

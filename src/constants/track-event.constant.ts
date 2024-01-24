@@ -3,7 +3,8 @@ export enum TRACK_EVENT {
   CUSTOM_EVENT = 'trackEvent',
   GOAL = 'trackGoal',
   SEARCH = 'trackSiteSearch',
-  ADD_ECOMMERCE_ITEM = 'ecommerceAddToCart',
+  ECOMMERCE_ADD_TO_CART = 'ecommerceAddToCart',
+  ADD_ECOMMERCE_ITEM = 'addEcommerceItem',
   REMOVE_ECOMMERCE_ITEM = 'ecommerceAddToCart',
   ECOMMERCE_PRODUCT_DETAIL_VIEW = 'ecommerceProductDetailView',
   UPDATE_ECOMMERCE_CART = 'ecommerceCartUpdate',
@@ -67,5 +68,5 @@ export enum TRACK_EVENT {
   SET_REQUEST_CONTENT_TYPE = 'setRequestContentType',
   ENABLE_JS_ERROR_TRACKING = 'enableJSErrorTracking',
   ERROR = 'trackError',
-  SET_TRACKING_SOURCE = 'setTrackingSource',
+  SET_TRACKING_SOURCE = 'setTrackingSource'
 }

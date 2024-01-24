@@ -105,7 +105,7 @@ const ECommercePage: FunctionComponent = () => {
 
   const handlelAddToCart = (product: Product) => {
     enqueueSnackbar(`eCommerce.addEcommerceItem()`, { variant: 'success' })
-    eCommerce.addEcommerceItem([
+    eCommerce.ecommerceAddToCart([
       {
         ...product,
         quantity: 1
