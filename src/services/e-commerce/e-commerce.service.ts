@@ -74,6 +74,10 @@ export function ecommerceProductDetailView(products: Product[]) {
   PaqService.push([TRACK_EVENT.ECOMMERCE_PRODUCT_DETAIL_VIEW, products])
 }
 
+export function clearEcommerceCart() {
+  PaqService.push([TRACK_EVENT.CLEAR_ECOMMERCE_CART])
+}
+
 /**
  * @deprecated since version 1.3.1.
  */
