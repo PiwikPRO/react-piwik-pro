@@ -104,7 +104,7 @@ const ECommercePage: FunctionComponent = () => {
   const { enqueueSnackbar } = useSnackbar()
 
   const handlelAddToCart = (product: Product) => {
-    enqueueSnackbar(`eCommerce.addEcommerceItem()`, { variant: 'success' })
+    enqueueSnackbar(`eCommerce.ecommerceAddToCart()`, { variant: 'success' })
     eCommerce.ecommerceAddToCart([
       {
         ...product,
@@ -147,14 +147,16 @@ const ECommercePage: FunctionComponent = () => {
       discount
     }
 
-    enqueueSnackbar(`eCommerce.trackEcommerceOrder()`, { variant: 'success' })
+    enqueueSnackbar(`eCommerce.ecommerceOrder()`, { variant: 'success' })
     eCommerce.ecommerceOrder(cart, paymentInformation)
   }
 
   const removeProduct = (product: Product) => {
     const newCart = cart.filter((item) => item.sku !== product.sku)
     setCart(newCart)
-    enqueueSnackbar(`eCommerce.removeEcommerceItem()`, { variant: 'success' })
+    enqueueSnackbar(`eCommerce.ecommerceRemoveFromCart()`, {
+      variant: 'success'
+    })
     eCommerce.ecommerceRemoveFromCart(newCart)
   }
 
