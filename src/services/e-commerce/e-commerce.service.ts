@@ -57,7 +57,7 @@ export function getEcommerceItems(): Promise<object> {
 }
 
 /**
- * @deprecated since version 1.3.1. Please use the ecommerceRemoveFromCart instead.
+ * @deprecated since version 1.3.1. Please use the ecommerceOrder instead.
  */
 export function trackEcommerceOrder(
   orderId: string,
