@@ -6,10 +6,13 @@ import {
   ListItemButton,
   ListItemText
 } from '@mui/material'
+import { Link, useLocation } from 'react-router-dom'
 
 const drawerWidth: number = 270
 
 function Header() {
+  const { pathname } = useLocation()
+
   return (
     <Drawer
       variant='permanent'
@@ -26,7 +29,11 @@ function Header() {
       <List>
         {routes.map(({ path, name }, index) => (
           <ListItem key={index} disablePadding>
-            <ListItemButton component='a' href={path}>
+            <ListItemButton
+              component={Link}
+              to={path}
+              selected={pathname === path}
+            >
               <ListItemText primary={name} />
             </ListItemButton>
           </ListItem>
