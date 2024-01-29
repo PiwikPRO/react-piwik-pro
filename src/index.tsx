@@ -12,6 +12,9 @@ export * as SiteSearch from './services/site-search/site-search.service';
 export * as UserManagement from './services/user-management/userManagement.service';
 export * as DataLayer from './services/dataLayer/dataLayer.service';
 
+export * from './interfaces/payment';
+export * from './interfaces/product';
+
 export default {
   initialize: PiwikPro.default.init,
 }
