@@ -1,4 +1,4 @@
-import { Product } from '../../../../src/interfaces/product.ts'
+import { Product } from '@piwikpro/react-piwik-pro'
 import { FunctionComponent } from 'react'
 import {
   Dialog,

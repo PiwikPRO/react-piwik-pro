@@ -1,7 +1,5 @@
 import { FunctionComponent, useEffect, useState } from 'react'
-import { Product } from '../../../src/interfaces/product.ts'
-import { PaymentInformation } from '../../../src/interfaces/payment.ts'
-import { eCommerce } from '@piwikpro/react-piwik-pro'
+import { eCommerce, Product, PaymentInformation } from '@piwikpro/react-piwik-pro'
 import { useSnackbar } from 'notistack'
 import {
   Box,
@@ -29,8 +27,8 @@ const products: Product[] = [
     variant: 'Variant 1',
     price: 9.99,
     customDimensions: {
-      dimension1: 'value1',
-      dimension2: 'value2'
+      1: 'value1',
+      2: 'value2'
     }
   },
   {
@@ -41,8 +39,8 @@ const products: Product[] = [
     variant: 'Variant 2',
     price: 19.98,
     customDimensions: {
-      dimension1: 'value1',
-      dimension2: 'value2'
+      1: 'value1',
+      2: 'value2'
     }
   },
   {
@@ -53,8 +51,8 @@ const products: Product[] = [
     variant: 'Variant 3',
     price: 29.97,
     customDimensions: {
-      dimension1: 'value1',
-      dimension2: 'value2'
+      1: 'value1',
+      2: 'value2'
     }
   },
   {
@@ -65,8 +63,8 @@ const products: Product[] = [
     variant: 'Variant 4',
     price: 39.96,
     customDimensions: {
-      dimension1: 'value1',
-      dimension2: 'value2'
+      1: 'value1',
+      2: 'value2'
     }
   },
   {
@@ -77,8 +75,8 @@ const products: Product[] = [
     variant: 'Variant 5',
     price: 49.95,
     customDimensions: {
-      dimension1: 'value1',
-      dimension2: 'value2'
+      1: 'value1',
+      2: 'value2'
     }
   },
   {
@@ -89,8 +87,8 @@ const products: Product[] = [
     variant: 'Variant 6',
     price: 59.94,
     customDimensions: {
-      dimension1: 'value1',
-      dimension2: 'value2'
+      1: 'value1',
+      2: 'value2'
     }
   }
 ]
