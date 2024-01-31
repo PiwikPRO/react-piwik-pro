@@ -7,7 +7,7 @@ import { SnackbarProvider } from 'notistack'
 import PiwikPro from '@piwikpro/react-piwik-pro'
 
 PiwikPro.initialize(
-  '0c0a8661-8c10-4f59-b8fc-1c926cbac184',
+  '957285ba-7867-4c6b-a8be-5e3e6c069b71',
   'https://astralprojection.promilci.com'
 )
 

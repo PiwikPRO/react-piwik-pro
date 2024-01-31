@@ -2,6 +2,7 @@ import { TRACK_EVENT } from '../../constants/track-event.constant'
 import { PaqService } from '../paqService/paq.service'
 import { Product } from '../../interfaces/product'
 import { PaymentInformation } from '../../interfaces/payment'
+import { Tracker } from '../../interfaces/tracker'
 
 /**
  * @deprecated since version 1.3.1. Please use the ecommerceAddToCart instead.
@@ -44,7 +45,7 @@ export function getEcommerceItems(): Promise<object> {
   return new Promise((resolve, reject) => {
     try {
       PaqService.push([
-        function (this: any): void {
+        function (this: Tracker): void {
           resolve(this.getEcommerceItems())
         }
       ])

@@ -1,4 +1,5 @@
 import { TRACK_EVENT } from '../../constants/track-event.constant';
+import { Tracker } from '../../interfaces/tracker';
 import { PaqService } from '../paqService/paq.service';
 
 export function setCustomDimensionValue(customDimensionId: string | number, customDimensionValue: string) {
@@ -9,11 +10,11 @@ export function deleteCustomDimension(customDimensionId: string) {
   PaqService.push([TRACK_EVENT.DELETE_CUSTOM_DIMENSION, customDimensionId]);
 }
 
-export function getCustomDimensionValue(customDimensionId: string | number): Promise<string> {
+export function getCustomDimensionValue(customDimensionId: string | number): Promise<string|undefined> {
   return new Promise((resolve, reject) => {
     try {
       PaqService.push([
-        function (this: any): void {
+        function (this: Tracker): void {
           resolve(this.getCustomDimensionValue(customDimensionId));
         },
       ]);

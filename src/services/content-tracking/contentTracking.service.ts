@@ -7,15 +7,15 @@ export function trackAllContentImpressions() {
   ]);
 }
 
-export function trackVisibleContentImpressions(checkOnScroll?: boolean, watchIterval?: number) {
+export function trackVisibleContentImpressions(checkOnScroll?: boolean, watchInterval?: number) {
   PaqService.push([
     TRACK_EVENT.VISIBLE_CONTENT_IMPRESSIONS,
     checkOnScroll,
-    watchIterval,
+    watchInterval,
   ]);
 }
 
-export function trackContentImpressionsWithinNode(domNode: any) {
+export function trackContentImpressionsWithinNode(domNode: Node) {
   PaqService.push([
     TRACK_EVENT.CONTENT_IMPRESSIONS_WITH_NODE,
     domNode
@@ -35,7 +35,7 @@ export function logAllContentBlocksOnPage(): void {
   PaqService.push([ TRACK_EVENT.LOG_ALL_CONTENT_BLOCKS_ON_PAGE ]);
 }
 
-export function trackContentInteractionNode(domNode: any, contentInteraction: string) {
+export function trackContentInteractionNode(domNode: Node, contentInteraction: string) {
   PaqService.push([
     TRACK_EVENT.CONTENT_INTERACTION_NODE,
     domNode,
