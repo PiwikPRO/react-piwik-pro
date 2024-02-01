@@ -23,7 +23,8 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
     "format":"prettier src/**/*.ts --list-different",
-    "format:fix":"npm run format -- --write"
+    "format:fix":"npm run format -- --write",
+    "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
