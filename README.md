@@ -190,7 +190,7 @@ Custom events enable tracking visitor actions that are not predefined in the exi
 import { CustomEvent } from '@piwikpro/react-piwik-pro'
 ```
 #### Methods
-* `trackEvent(category: string, action: string, name?: string, value?: number) ` - Tracks a custom event, e.g. when a visitor interacts with the page.
+* `trackEvent(category: string, action: string, name?: string, value?: number, dimensions?: Object) ` - Tracks a custom event, e.g. when a visitor interacts with the page.
 
 ### Site search Service
 Site search tracking gives you insights into how visitors interact with the search engine on your website - what they search for and how many results they get back.

@@ -1,12 +1,14 @@
 import { TRACK_EVENT } from '../../constants/track-event.constant';
+import { Tracker } from '../../interfaces/tracker';
+import { Dimensions } from '../../interfaces/utils';
 import { PaqService } from '../paqService/paq.service';
 
-export function trackLink(url: string, linkType: string, customData?: object, callback?: (params: any) => void) {
+export function trackLink(url: string, linkType: string, dimensions?: Dimensions, callback?: () => void) {
   PaqService.push([
     TRACK_EVENT.LINK,
     url,
     linkType,
-    customData,
+    dimensions,
     callback
   ]);
 }
@@ -39,11 +41,11 @@ export function setLinkTrackingTimer(time: number) {
   PaqService.push([TRACK_EVENT.SET_LINK_TRACKING_TIMER, time]);
 }
 
-export function getLinkTrackingTimer(): Promise<string> {
+export function getLinkTrackingTimer(): Promise<number> {
   return new Promise((resolve, reject) => {
     try {
       PaqService.push([
-        function (this: any) {
+        function (this: Tracker) {
           resolve(this.getLinkTrackingTimer());
         },
       ]);

@@ -36,5 +36,8 @@ const App = () => (
 )
 
 const container = document.getElementById('root')
-// @ts-ignore
+if(!container){
+  throw new Error("#root element not found")
+}
+
 createRoot(container).render(<App />)

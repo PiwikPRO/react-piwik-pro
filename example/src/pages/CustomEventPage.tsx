@@ -45,9 +45,15 @@ const CustomEventPage: FunctionComponent = () => {
                   variant='contained'
                   onClick={() => {
                     setFinish(true)
-                    CustomEvent.trackEvent('user_data_form', 'submit')
+                    CustomEvent.trackEvent(
+                      'user_data_form',
+                      'submit',
+                      'success',
+                      10,
+                      { dimension1: 'value1' }
+                    )
                     enqueueSnackbar(
-                      "CustomEvent.trackEvent('user_data_form', 'submit')",
+                      "CustomEvent.trackEvent('user_data_form', 'submit', 'success', 10, { dimension1: 'value1' })",
                       { variant: 'success' }
                     )
                   }}

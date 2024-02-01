@@ -1,3 +1,4 @@
+// NOTE: .tsx file extension is required for microbundle-crl to pick up and build the lib 
 import * as PiwikPro from './core'
 
 export * as PageViews from './services/pageViews/pageViews.service';
