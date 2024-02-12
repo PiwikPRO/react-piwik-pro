@@ -52,3 +52,7 @@ export function trackContentInteraction(contentInteraction: string, contentName:
     contentTarget
   ]);
 }
+
+export function clearTrackedContentImpressions(){
+  PaqService.push([TRACK_EVENT.CLEAR_TRACKED_CONTENT_IMPRESSIONS])
+}
