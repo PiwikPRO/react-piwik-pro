@@ -27,6 +27,7 @@ export enum TRACK_EVENT {
   LOG_ALL_CONTENT_BLOCKS_ON_PAGE = 'logAllContentBlocksOnPage',
   CONTENT_INTERACTION_NODE = 'trackContentInteractionNode',
   CONTENT_INTERACTION = 'trackContentInteraction',
+  CLEAR_TRACKED_CONTENT_IMPRESSIONS = 'clearTrackedContentImpressions',
   LINK = 'trackLink',
   ENABLE_LINK_TRACKING = 'enableLinkTracking',
   SET_IGNORE_CLASSES = 'setIgnoreClasses',
