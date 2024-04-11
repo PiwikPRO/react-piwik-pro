@@ -5,14 +5,16 @@
   "author": "Piwik Pro Integration Team <integrations@piwik.pro>",
   "license": "MIT",
   "repository": "https://github.com/PiwikPRO/react-piwik-pro",
+  "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
   "engines": {
-    "node": ">=10"
+    "node": ">=18"
   },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
+    "build:docs": "typedoc && concat-md docs_raw > README.md && node scripts/postProcessDocs.js",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
     "test": "run-s test:unit test:build",
@@ -22,8 +24,8 @@
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
-    "format":"prettier src/**/*.ts --list-different",
-    "format:fix":"npm run format -- --write",
+    "format": "prettier src/**/*.ts --list-different",
+    "format:fix": "npm run format -- --write",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
@@ -42,6 +44,7 @@
     "@typescript-eslint/eslint-plugin": "^6.18.0",
     "@typescript-eslint/parser": "^6.18.0",
     "babel-eslint": "^10.1.0",
+    "concat-md": "^0.5.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.56.0",
     "gh-pages": "^6.1.1",
@@ -50,9 +53,14 @@
     "prettier": "^3.1.1",
     "react": "^18.2.0",
     "react-scripts": "^5.0.1",
+    "typedoc": "^0.25.13",
+    "typedoc-plugin-markdown": "^3.17.1",
     "typescript": "^5.3.3"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "@piwikpro/tracking-base-library": "^1.1.1"
+  }
 }
