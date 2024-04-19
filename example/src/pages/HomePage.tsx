@@ -1,6 +1,11 @@
 import { Typography } from '@mui/material'
+import { useEffect } from 'react'
 
 function HomePage() {
+  useEffect(() => {
+    document.title = 'Piwik Pro + Vite + React + TS'
+  }, [])
+
   return (
     <>
       <Typography variant='h5'>
