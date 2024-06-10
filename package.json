@@ -1,6 +1,6 @@
 {
   "name": "@piwikpro/react-piwik-pro",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Piwik PRO tracking library for ReactJS",
   "author": "Piwik Pro Integration Team <integrations@piwik.pro>",
   "license": "MIT",
@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
-    "build:docs": "typedoc && concat-md docs_raw > README.md && node scripts/postProcessDocs.js",
+    "build:docs": "typedoc && concat-md --decrease-title-levels --start-title-level-at=2 docs_raw > README.md && node scripts/postProcessDocs.js",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
     "test": "run-s test:unit test:build",
@@ -61,6 +61,6 @@
     "dist"
   ],
   "dependencies": {
-    "@piwikpro/tracking-base-library": "^1.1.2"
+    "@piwikpro/tracking-base-library": "^1.2.0"
   }
 }

@@ -2596,10 +2596,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@piwikpro/tracking-base-library@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@piwikpro/tracking-base-library/-/tracking-base-library-1.1.2.tgz#e3bf1f1499046d0d00af26578d466cbb35ea5dfa"
-  integrity sha512-zOfDgtZEHujQOeLvq6IctXbJpIY+mixDgEnGR/4yc72g2vKaIf8g6N4P8jGREYUovBVwcrwh99fIP9V+dsrtBA==
+"@piwikpro/tracking-base-library@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@piwikpro/tracking-base-library/-/tracking-base-library-1.2.0.tgz#66c93c04dc2b29e986f05221c1422b26a8e4fb30"
+  integrity sha512-D3F29v0D77vPHGeVognfLYWrP/K6SfnukWERelxsiduFuRWPbKagMLqMxsxnw81QURhSy/CngAmjPBAM1jXAjg==
 
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.3":
   version "0.5.11"
