@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import typescript from '@rollup/plugin-typescript'
+import { dependencies } from './package.json'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -7,8 +8,8 @@ export default defineConfig({
     typescript({
       declaration: true,
       declarationDir: 'dist',
-      sourceMap: true,
-    }),
+      sourceMap: true
+    })
   ],
   build: {
     sourcemap: true,
@@ -16,7 +17,10 @@ export default defineConfig({
     lib: {
       entry: './src/index.ts',
       name: 'tracking-base-library',
-      fileName: 'index',
+      fileName: 'index'
     },
-  },
+    rollupOptions: {
+      external: Object.keys(dependencies)
+    }
+  }
 })
