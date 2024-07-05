@@ -6,7 +6,7 @@ const config = {
     'plugin:@typescript-eslint/recommended-type-checked'
   ],
   plugins: ['@typescript-eslint'],
-  ignorePatterns: ['.eslintrc.cjs', 'example', 'scripts'],
+  ignorePatterns: ['.eslintrc.cjs', 'example', 'scripts', 'vite.config.ts'],
   parserOptions: {
     project: true,
     tsconfigRootDir: __dirname
