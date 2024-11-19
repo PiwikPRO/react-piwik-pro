@@ -465,14 +465,14 @@
     fastq "^1.6.0"
 
 "@piwikpro/react-piwik-pro@file:..":
-  version "2.0.1"
+  version "2.1.2"
   dependencies:
-    "@piwikpro/tracking-base-library" "^1.2.0"
+    "@piwikpro/tracking-base-library" "^1.2.2"
 
-"@piwikpro/tracking-base-library@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@piwikpro/tracking-base-library/-/tracking-base-library-1.2.0.tgz#66c93c04dc2b29e986f05221c1422b26a8e4fb30"
-  integrity sha512-D3F29v0D77vPHGeVognfLYWrP/K6SfnukWERelxsiduFuRWPbKagMLqMxsxnw81QURhSy/CngAmjPBAM1jXAjg==
+"@piwikpro/tracking-base-library@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@piwikpro/tracking-base-library/-/tracking-base-library-1.2.2.tgz#77f2e2a10066b88df6d4a047df8b6864ceb589f9"
+  integrity sha512-utGj15SwuO38Gm+DDaea5hScnZT5XF6jlUXgxqKjdUHtLR+p8DHby/Cd0L3kkUxSqdbhHOu73W5mmcxm9E26qg==
 
 "@popperjs/core@^2.11.8":
   version "2.11.8"
@@ -923,9 +923,9 @@ cosmiconfig@^7.0.0:
     yaml "^1.10.0"
 
 cross-spawn@^7.0.2:
-  version "7.0.3"
-  resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz"
-  integrity sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==
+  version "7.0.6"
+  resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.6.tgz#8a58fe78f00dcd70c370451759dfbfaf03e8ee9f"
+  integrity sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==
   dependencies:
     path-key "^3.1.0"
     shebang-command "^2.0.0"
