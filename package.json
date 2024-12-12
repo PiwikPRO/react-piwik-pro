@@ -64,6 +64,6 @@
     "dist"
   ],
   "dependencies": {
-    "@piwikpro/tracking-base-library": "^1.2.2"
+    "@piwikpro/tracking-base-library": "^1.2.3"
   }
 }
