@@ -465,14 +465,14 @@
     fastq "^1.6.0"
 
 "@piwikpro/react-piwik-pro@file:..":
-  version "2.0.1"
+  version "2.1.2"
   dependencies:
-    "@piwikpro/tracking-base-library" "^1.2.0"
+    "@piwikpro/tracking-base-library" "^1.2.3"
 
-"@piwikpro/tracking-base-library@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@piwikpro/tracking-base-library/-/tracking-base-library-1.2.0.tgz#66c93c04dc2b29e986f05221c1422b26a8e4fb30"
-  integrity sha512-D3F29v0D77vPHGeVognfLYWrP/K6SfnukWERelxsiduFuRWPbKagMLqMxsxnw81QURhSy/CngAmjPBAM1jXAjg==
+"@piwikpro/tracking-base-library@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@piwikpro/tracking-base-library/-/tracking-base-library-1.2.3.tgz#08d8757b86ece2686d1c942dbb94a2f6a5fbdf01"
+  integrity sha512-KK2tALpeKznq0MKGdRbOjYlOaMErwHq0fp0o7K4MNfzAhc4ggG2osbE+qi/7/+yEnVchu4ugygRGz9As7+XW1A==
 
 "@popperjs/core@^2.11.8":
   version "2.11.8"
