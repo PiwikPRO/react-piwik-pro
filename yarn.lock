@@ -355,10 +355,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@piwikpro/tracking-base-library@^1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@piwikpro/tracking-base-library/-/tracking-base-library-1.2.3.tgz#08d8757b86ece2686d1c942dbb94a2f6a5fbdf01"
-  integrity sha512-KK2tALpeKznq0MKGdRbOjYlOaMErwHq0fp0o7K4MNfzAhc4ggG2osbE+qi/7/+yEnVchu4ugygRGz9As7+XW1A==
+"@piwikpro/tracking-base-library@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@piwikpro/tracking-base-library/-/tracking-base-library-1.3.0.tgz#0d8c99279b781c301b6abb13c9207b9a4dee1cb4"
+  integrity sha512-aFmqKletJSMHJRvWfVGk4+MeNi9OpC/riUhKW/wem+6yOThdcsFGNM8LuUS145ZrhXRMQqBgWjUa+BDc1Zy6GA==
 
 "@rollup/plugin-typescript@^11.1.6":
   version "11.1.6"
