@@ -140,7 +140,7 @@ const GoalConversionsPage: FunctionComponent = () => {
 
   useEffect(() => {
     if (activeStep === steps.length) {
-      GoalConversions.trackGoal(1, 1)
+      GoalConversions.trackGoal(1, 1, undefined, { currencyCode: 'USD' })
       enqueueSnackbar(`GoalConversions.trackGoal()`, { variant: 'success' })
     }
   }, [activeStep, enqueueSnackbar])

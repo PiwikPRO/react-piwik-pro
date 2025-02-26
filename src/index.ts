@@ -7,7 +7,7 @@ const initialize: Initialize = (...args) => {
   if (typeof window !== 'undefined') {
     Miscellaneous.setTrackingSourceProvider('react', version)
   }
-  
+
   PiwikPRO.default.initialize(...args)
 }
 
