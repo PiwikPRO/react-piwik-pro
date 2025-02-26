@@ -1,6 +1,6 @@
 {
   "name": "@piwikpro/react-piwik-pro",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "Piwik PRO tracking library for ReactJS",
   "author": "Piwik Pro Integration Team <integrations@piwik.pro>",
   "license": "MIT",
