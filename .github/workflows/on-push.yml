@@ -38,8 +38,8 @@ jobs:
       # Build example app
       - name: Install modules
         run: yarn install --frozen-lockfile
-        working-directory: example
+        working-directory: ./example
 
       - name: Build
         run: yarn build
-        working-directory: example
+        working-directory: ./example
