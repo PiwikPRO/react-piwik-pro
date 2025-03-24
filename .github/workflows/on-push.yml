@@ -36,11 +36,10 @@ jobs:
       #   run: yarn test
 
       # Build example app
-      - name: Change directory
-        run: cd example
-
       - name: Install modules
         run: yarn install --frozen-lockfile
+        working-directory: example
 
       - name: Build
         run: yarn build
+        working-directory: example
