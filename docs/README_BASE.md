@@ -2,6 +2,7 @@
 
 Dedicated Piwik PRO library that helps with implementing Piwik PRO Tag Manager and the Piwik PRO tracking client in React applications.
 
+
 ## Installation
 
 ### NPM
@@ -11,6 +12,7 @@ To use this package in your project, run the following command.
 ```
 npm install @piwikpro/react-piwik-pro
 ```
+
 
 ### Basic setup
 
@@ -108,5 +110,3 @@ const App = () => {
 
 export default App
 ```
-
-test
