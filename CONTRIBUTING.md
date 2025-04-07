@@ -6,24 +6,29 @@ We want this community to be friendly and respectful to each other. Please follo
 
 To get started with the project, run `yarn` in the root directory to install the required dependencies for each package:
 
-```sh  
-yarn 
-```  
-
+```sh
+yarn
+```
 
 While developing, you can run the example to test your changes. Any changes you make in your library's JavaScript code will be reflected in the example app without a rebuild. If you change any native code, then you'll need to rebuild the example app.
 
 To start the packager:
 
-```sh  
+```sh
 yarn start
-```   
+```
 
 Remember to add tests for your change if possible. Run the unit tests by:
 
-```sh  
-yarn test  
-```  
+```sh
+yarn test
+```
+
+If you made a change that will update the documentation, please run:
+
+```sh
+yarn build:docs
+```
 
 ### Commit message convention
 
@@ -36,15 +41,11 @@ We follow the [conventional commits specification](https://www.conventionalcommi
 - `test`: adding or updating tests, e.g. add integration tests using detox.
 - `chore`: tooling changes, e.g. change CI config.
 
-Our pre-commit hooks verify that your commit message matches this format when committing.
-
 ### Linting and tests
 
 [ESLint](https://eslint.org/), [Prettier](https://prettier.io/), [TypeScript](https://www.typescriptlang.org/)
 
 We use [TypeScript](https://www.typescriptlang.org/) for type checking, [ESLint](https://eslint.org/) with [Prettier](https://prettier.io/) for linting and formatting the code, and [Jest](https://jestjs.io/) for testing.
-
-Our pre-commit hooks verify that the linter and tests pass when committing.
 
 ### Sending a pull request
 
@@ -57,6 +58,8 @@ When you're sending a pull request:
 - Review the documentation to make sure it looks good.
 - Follow the pull request template when opening a pull request.
 - For pull requests that change the API or implementation, discuss with maintainers first by opening an issue.
+
+After opening a pull request, our CI will verify that the formatting is correct, tests are passing and documentation is up to date.
 
 ## Code of Conduct
 
