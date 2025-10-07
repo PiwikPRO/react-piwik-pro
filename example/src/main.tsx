@@ -3,37 +3,49 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { createRoot } from 'react-dom/client'
 import { routes } from './routes.tsx'
 import { Box, CssBaseline } from '@mui/material'
+import { CacheProvider } from '@emotion/react'
+import createCache from '@emotion/cache'
 import { SnackbarProvider } from 'notistack'
 import PiwikPro from '@piwikpro/react-piwik-pro'
+
+// to test the nonce, we need to build the app and serve it with CSP policy
+const nonce = '8IBTHwOdqNKAWeKl7plt8g==' // nonce placeholder
+const cache = createCache({
+  key: 'css',
+  prepend: true,
+  nonce: nonce
+})
 
 PiwikPro.initialize(
   '957285ba-7867-4c6b-a8be-5e3e6c069b71',
   'https://astralprojection.promilci.com',
-  { dataLayerName: 'myDataLayer' }
+  { dataLayerName: 'myDataLayer', nonce }
 )
 
 const App = () => (
-  <SnackbarProvider
-    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-    maxSnack={10}
-  >
-    <Router>
-      <Box sx={{ display: 'flex' }}>
-        <CssBaseline />
-        <Header />
-        <Box
-          component='main'
-          sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
-        >
-          <Routes>
-            {routes.map(({ path, element }, index) => (
-              <Route key={index} path={path} element={element} />
-            ))}
-          </Routes>
+  <CacheProvider value={cache}>
+    <SnackbarProvider
+      anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+      maxSnack={10}
+    >
+      <Router>
+        <Box sx={{ display: 'flex' }}>
+          <CssBaseline />
+          <Header />
+          <Box
+            component='main'
+            sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
+          >
+            <Routes>
+              {routes.map(({ path, element }, index) => (
+                <Route key={index} path={path} element={element} />
+              ))}
+            </Routes>
+          </Box>
         </Box>
-      </Box>
-    </Router>
-  </SnackbarProvider>
+      </Router>
+    </SnackbarProvider>
+  </CacheProvider>
 )
 
 const container = document.getElementById('root')
