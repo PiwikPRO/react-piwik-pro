@@ -1,6 +1,6 @@
 {
   "name": "@piwikpro/react-piwik-pro",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "description": "Piwik PRO tracking library for ReactJS",
   "author": "Piwik Pro Integration Team <integrations@piwik.pro>",
   "license": "MIT",
@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-unicode-property-regex": "^7.18.6",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@testing-library/jest-dom": "^6.2.0",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.2",
@@ -47,23 +48,22 @@
     "@typescript-eslint/eslint-plugin": "^6.18.0",
     "@typescript-eslint/parser": "^6.18.0",
     "babel-eslint": "^10.1.0",
+    "concat-md": "^0.5.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.56.0",
     "gh-pages": "^6.1.1",
     "prettier": "^3.1.1",
     "react": "^18.2.0",
-    "typescript": "^5.2.2",
-    "@rollup/plugin-typescript": "^11.1.6",
-    "concat-md": "^0.5.1",
     "tslib": "^2.6.3",
     "typedoc": "^0.25.13",
     "typedoc-plugin-markdown": "^3.17.1",
+    "typescript": "^5.2.2",
     "vite": "^5.3.1"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@piwikpro/tracking-base-library": "^1.6.0"
+    "@piwikpro/tracking-base-library": "^1.7.0"
   }
 }
