@@ -58,7 +58,7 @@
     "typedoc": "^0.25.13",
     "typedoc-plugin-markdown": "^3.17.1",
     "typescript": "^5.2.2",
-    "vite": "^5.3.1"
+    "vite": "^6.4.3"
   },
   "files": [
     "dist"
