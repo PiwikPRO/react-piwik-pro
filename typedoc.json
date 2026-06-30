@@ -4,5 +4,6 @@
   "out": "docs_raw",
   "plugin": ["typedoc-plugin-markdown"],
   "readme": "docs/README_BASE.md",
+  "gitRevision": "master",
   "disableSources": true
 }
