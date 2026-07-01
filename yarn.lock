@@ -346,10 +346,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@piwikpro/tracking-base-library@^1.7.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@piwikpro/tracking-base-library/-/tracking-base-library-1.7.0.tgz#322f1f958ee9bd7a7e637d53c5458ad134ee3fb0"
-  integrity sha512-0u5YTcYO2As9T6ZFuJn0da6VYWz0sVYFFujkwiD8fz0o+Jjvl8r8Fk7rM2/ifLs03bqBOYe8MZRCjDKHWQzaiQ==
+"@piwikpro/tracking-base-library@^1.7.1":
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/@piwikpro/tracking-base-library/-/tracking-base-library-1.7.1.tgz#716dd45a541f0bfae02fd9fde5df51beb80ed40c"
+  integrity sha512-vDV8NZ7rYTlhKBHMHL880QqPOPzrXSurZn0sfhodqwGa9v7tmqLJe0IaG2Su1fOtlQm5pb2zobm8ngar45AKmQ==
 
 "@rollup/plugin-typescript@^11.1.6":
   version "11.1.6"
@@ -564,15 +564,10 @@
   resolved "https://registry.yarnpkg.com/@types/aria-query/-/aria-query-5.0.4.tgz#1a31c3d378850d2778dabb6374d036dcba4ba708"
   integrity sha512-rfT93uj5s0PRL7EzccGMs3brplhcrghnDoV26NqKhCAS1hVo+WdNsPvE/yb6ilfr5hi2MEk6d5EWJTKdxg8jVw==
 
-"@types/estree@1.0.9", "@types/estree@^1.0.6":
+"@types/estree@1.0.9", "@types/estree@^1.0.0", "@types/estree@^1.0.6":
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.9.tgz#cf3f0e876d7bee15a93ab925b82bf570a3904a24"
   integrity sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==
-
-"@types/estree@^1.0.0":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.6.tgz#628effeeae2064a1b4e79f78e81d87b7e5fc7b50"
-  integrity sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.6"

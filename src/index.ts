@@ -11,9 +11,7 @@ const initialize: Initialize = (...args) => {
   PiwikPro.initialize(...args)
 }
 
-const defaultExport: typeof PiwikPro = {
-  ...PiwikPro,
+export default {
   initialize,
+  getInitScript: PiwikPro.getInitScript,
 }
-
-export default defaultExport

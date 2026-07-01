@@ -143,6 +143,7 @@ export default App
 
 - [Dimensions](#dimensions)
 - [EcommerceOptions](#ecommerceoptions)
+- [GetInitScript](#getinitscript)
 - [InitOptions](#initoptions)
 - [Initialize](#initialize)
 - [PaymentInformation](#paymentinformation)
@@ -170,6 +171,26 @@ ___
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `currencyCode?` | `string` | Currency code in [ISO 4217](https://en.wikipedia.org/wiki/ISO_4217) format. If not provided, the currency set in app settings will be used instead. |
+
+___
+
+#### GetInitScript
+
+Ƭ **GetInitScript**: (`params`: `GetInitScriptParams`) => `string`
+
+##### Type declaration
+
+▸ (`params`): `string`
+
+###### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `params` | `GetInitScriptParams` |
+
+###### Returns
+
+`string`
 
 ___
 
@@ -258,7 +279,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `getInitScript` | (`__namedParameters`: \{ `containerId`: `string` ; `containerUrl`: `string` ; `dataLayerName?`: `string` ; `nonceValue?`: `string`  }) => `string` |
+| `getInitScript` | [`GetInitScript`](#getinitscript) |
 | `initialize` | [`Initialize`](#initialize) |
 
 
