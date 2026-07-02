@@ -45,25 +45,27 @@
     "@types/node": "^20.10.7",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
-    "@typescript-eslint/eslint-plugin": "^6.18.0",
-    "@typescript-eslint/parser": "^6.18.0",
-    "babel-eslint": "^10.1.0",
+    "@eslint/js": "^9.39.1",
+    "typescript-eslint": "^8.46.2",
     "concat-md": "^0.5.1",
     "cross-env": "^7.0.3",
-    "eslint": "^8.56.0",
+    "eslint": "^9.39.1",
     "gh-pages": "^6.1.1",
     "prettier": "^3.1.1",
     "react": "^18.2.0",
     "tslib": "^2.6.3",
     "typedoc": "^0.25.13",
     "typedoc-plugin-markdown": "^3.17.1",
-    "typescript": "^5.2.2",
+    "typescript": "~5.4.5",
     "vite": "^6.4.3"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@piwikpro/tracking-base-library": "^1.7.0"
+    "@piwikpro/tracking-base-library": "^1.7.1"
+  },
+  "resolutions": {
+    "@types/estree": "1.0.9"
   }
 }
