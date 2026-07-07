@@ -4,6 +4,12 @@
   "out": "docs_raw",
   "plugin": ["typedoc-plugin-markdown"],
   "readme": "docs/README_BASE.md",
-  "gitRevision": "master",
-  "disableSources": true
+  "disableSources": true,
+  "parametersFormat": "table",
+  "excludeScopesInPaths": true,
+  "hideBreadcrumbs": true,
+  "hidePageHeader": true,
+  "pageTitleTemplates": {
+    "member": "{name}"
+  }
 }
