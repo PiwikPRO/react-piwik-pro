@@ -18,7 +18,7 @@ const cache = createCache({
 
 PiwikPro.initialize(
   '957285ba-7867-4c6b-a8be-5e3e6c069b71',
-  'https://astralprojection.promilci.com',
+  'https://example.piwik.pro',
   { dataLayerName: 'myDataLayer', nonce }
 )
 
