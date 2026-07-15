@@ -14,7 +14,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Build library
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
 
       - uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c
@@ -28,23 +27,24 @@ jobs:
       - name: Build
         run: yarn build
 
-      # Run test and typecheck
       - name: Typecheck
         run: yarn typecheck
 
-      # - name: Run tests
-      #   run: yarn test
+      - name: Run unit tests
+        run: yarn test
 
-      # Build example app
       - name: Install modules
         run: yarn install --frozen-lockfile
         working-directory: ./example
 
-      - name: Build
-        run: yarn build
+      - name: Install Playwright browser
+        run: yarn playwright install --with-deps chromium
         working-directory: ./example
 
-      # Check documentation
+      - name: Run e2e tests
+        run: yarn test:e2e
+        working-directory: ./example
+
       - name: Generate documentation
         run: yarn build:docs
 
