@@ -48,15 +48,15 @@ Release **after** the PR is merged, so it points at the real merge commit on
    git checkout -b release/x.y.z
    ```
 
-2. Bump the version. This does **not** create a commit or tag — `.yarnrc` sets
-   `version-git-tag false`, so `yarn version` only edits `package.json`. The
+2. Bump the version. This does **not** create a commit or tag — `.npmrc` sets
+   `git-tag-version=false`, so `npm version` only edits `package.json`. The
    `version` lifecycle hook still runs, so it also regenerates the changelog
    (adds the new version heading + commits since the last release). The version
    string itself ends up in the build because `src/index.ts` imports it from
    `package.json`, so there is no separate bake step:
 
    ```sh
-   yarn version --patch   # or --minor / --major
+   npm version patch   # or minor / major
    ```
 
 3. Commit and push the branch:

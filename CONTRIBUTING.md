@@ -4,30 +4,30 @@ We want this community to be friendly and respectful to each other. Please follo
 
 ## Development workflow
 
-To get started with the project, run `yarn` in the root directory to install the required dependencies for each package:
+To get started with the project, run `npm install` in the root directory to install the required dependencies for each package:
 
 ```sh
-yarn
+npm install
 ```
 
 While developing, you can run the example to test your changes. Any changes you make in your library's JavaScript code will be reflected in the example app without a rebuild. If you change any native code, then you'll need to rebuild the example app.
 
-To start the packager:
+To rebuild the library on every change:
 
 ```sh
-yarn start
+npm run dev
 ```
 
 Remember to add tests for your change if possible. Run the unit tests by:
 
 ```sh
-yarn test
+npm run test
 ```
 
 If you made a change that will update the documentation, please run:
 
 ```sh
-yarn build:docs
+npm run build:docs
 ```
 
 ### Commit message convention
