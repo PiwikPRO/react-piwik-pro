@@ -5,6 +5,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.0](https://github.com/PiwikPRO/react-piwik-pro/compare/2.6.0...3.0.0)
+
+### Merged
+
+- chore!: bump tracking-base-library [`#80`](https://github.com/PiwikPRO/react-piwik-pro/pull/80)
+- chore(deps): bump js-yaml from 4.3.0 to 4.3.1 in /example [`#79`](https://github.com/PiwikPRO/react-piwik-pro/pull/79)
+- chore: bump vite in /example [`#78`](https://github.com/PiwikPRO/react-piwik-pro/pull/78)
+- ci: add pr title lint [`#77`](https://github.com/PiwikPRO/react-piwik-pro/pull/77)
+- chore: replace yarn with npm [`#76`](https://github.com/PiwikPRO/react-piwik-pro/pull/76)
+- test: added unit and e2e tests [`#75`](https://github.com/PiwikPRO/react-piwik-pro/pull/75)
+- chore: added Changelog [`#74`](https://github.com/PiwikPRO/react-piwik-pro/pull/74)
+- Bump typedoc and update Readme [`#71`](https://github.com/PiwikPRO/react-piwik-pro/pull/71)
+- chore: bump vite in /example [`#70`](https://github.com/PiwikPRO/react-piwik-pro/pull/70)
+- chore: bump tracking-base-library, minimatch and other deps [`#69`](https://github.com/PiwikPRO/react-piwik-pro/pull/69)
+- Bump vite from 5.4.11 to 6.4.3 [`#68`](https://github.com/PiwikPRO/react-piwik-pro/pull/68)
+- Bump rollup from 4.8.0 to 4.59.0 in /example [`#60`](https://github.com/PiwikPRO/react-piwik-pro/pull/60)
+- Bump flatted from 3.3.1 to 3.4.2 [`#63`](https://github.com/PiwikPRO/react-piwik-pro/pull/63)
+- Bump flatted from 3.2.9 to 3.4.2 in /example [`#64`](https://github.com/PiwikPRO/react-piwik-pro/pull/64)
+- Bump lodash from 4.17.21 to 4.18.1 [`#66`](https://github.com/PiwikPRO/react-piwik-pro/pull/66)
+- Bump rollup from 4.26.0 to 4.62.2 [`#61`](https://github.com/PiwikPRO/react-piwik-pro/pull/61)
+
+### Commits
+
+- Add/update SECURITY.md [`6c0293f`](https://github.com/PiwikPRO/react-piwik-pro/commit/6c0293f685a4263938f4511b7c10bbe8aa768866)
+- Bump handlebars from 4.7.8 to 4.7.9 [`3524e19`](https://github.com/PiwikPRO/react-piwik-pro/commit/3524e1948356a9ac0bc129d75a1b07f3658e4362)
+
 ## [2.6.0](https://github.com/PiwikPRO/react-piwik-pro/compare/2.5.0...2.6.0) - 2026-05-05
 
 ### Merged
